@@ -1,0 +1,149 @@
+<!--Joaquin Jauregui (312103)   Santiago Cajal (282766)-->
+<!doctype html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/estilos.css">
+	<script src="js/datosPrueba.js" defer></script>
+	<script src="js/funciones.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUEBAS 1</title>
+</head>
+<body>
+    <header>
+        <div class="naranja">
+            <div class="container1">
+                <img src="img/trivia.jpg" alt="Trivia">
+            </div>
+            <a id="Tope"></a>
+            <nav>
+                <ul class="center">
+                    <li><a href="#informacion">Información General</a></li>
+                    <li><a href="#administrar">Administrar</a></li>
+                    <li><a href="#jugar">¡Jugar!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="informacion" class="amarillo">
+            <h1 class="center">Descripción General</h1>
+            <hr>
+            <h2 class="center">¿Qué encontrarás en este lugar?</h2>
+            <p>En este sitio podrás crear temas, preguntas y jugar a nuestra versión del conocido juego de trivia.</p>
+            <p>Es una prueba de conocimientos generales con preguntas y respuestas.</p>
+            <p>Cada tema tiene un nombre y una descripción. Cada pregunta es de un tema, tiene un nivel de dificultad (siendo 1 el más fácil, hasta el 5 siendo el más difícil), un texto que la describe y te aparecerán varias respuestas, pero una sola es la correcta. Si respondes bien, sumas 10 puntos, por cada error pierdes un punto, ¡pero puedes usar ayuda!</p>
+            <p>El sitio fue desarrollado en el 1er semestre 2024 - Programación I - Universidad ORT Uruguay por:</p>
+            <ul class="fotos">
+                <li>
+                    <img src="img/jj.jpg" alt="Joaquín Jauregui">
+                    <span>Joaquín Jauregui (312103)</span>
+                </li>
+                <li>
+                    <img src="img/santi.jpg" alt="Santiago Cajal Mayola">
+                    <span>Santiago Cajal Mayola (282766)</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="administrar" class="mostaza">
+    <h1 class="center">GESTIÓN DE TEMAS</h1>
+    <hr>
+    <h2 class="center">Alta de temas</h2>
+    <form id="formularioTema">
+        <label for="idNombre">Nombre del tema</label>
+        <input type="text" id="idNombre" name="nombre" required>
+        <label for="idDescripcion">Descripción del tema</label>
+        <input type="text" id="idDescripcion" name="descripcion" required>
+        <input type="submit" value="Agregar Tema">
+    </form>
+    <h2 class="center">Datos generales de temas</h2>
+    <p id="contadorTemas">Lista de temas (total de temas: 0)</p>
+    <ul id="listaTemas">
+        <li>Sin datos</li>
+    </ul>
+    <p id="promedioPreguntas">Promedio de preguntas por tema (cantidad total de preguntas/cantidad total de temas): sin datos</p>
+    <p>Temas sin preguntas:</p>
+    <ul id="listaTemasSinPreguntas">
+        <li>Sin datos</li>
+    </ul>
+</section>
+
+        <section class="mostaza">
+            <h1 class="center">GESTIÓN DE PREGUNTAS</h1>
+            <hr>
+            <h2 class="center">Alta de preguntas</h2>
+           <form id="formularioPregunta">
+				<label for="idTemas">Tema</label>
+				<select id="idTemas" required>
+    <option value="">Selecciona un tema...</option>
+    <!-- Otras opciones se actualizarán dinámicamente aquí -->
+</select>
+				<label for="idNivel">Nivel</label>
+				<input type="number" id="idNivel" name="nivel" required min="1" max="5">
+				<label for="idTextoP">Texto de la pregunta</label>
+				<input type="text" id="idTextoP" name="textopreg" required>	
+				<label for="idRespC">Respuesta Correcta</label>
+				<input type="text" id="idRespC" name="respuestac" required>
+				<label for="idRespI">Respuestas Incorrectas</label>
+				<input type="text" id="idRespI" name="respuestai" required>
+				<input type="submit" value="Agregar Pregunta">
+			</form>
+            <h2 class="center">Datos generales de preguntas</h2>
+            <p id="totalPreguntas">Total de preguntas registradas: 0 preguntas</p>
+            <p>Máximo puntuaje obtenido por un jugador: sin datos</p>
+            <label>Preguntas registradas:</label>
+            <input type="radio" id="idRadioCreciente" name="orden" value="creciente" checked> Orden nombre tema creciente/nivel creciente
+            <input type="radio" id="idRadioDecreciente" name="orden" value="decreciente"> Orden nombre tema decreciente/nivel creciente
+			<div id="tabla-container">
+    <table style="border: 1px solid black;">
+        <thead>
+            <tr>
+                <th>Nombre del tema</th>
+                <th>Nivel</th>
+                <th class="columna-larga1">Texto de la pregunta</th>
+                <th class="columna-larga2">Respuesta Correcta</th>
+                <th class="columna-larga3">Respuestas Incorrectas</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPreguntasBody">
+            <tr>
+                <td colspan="5">Sin datos</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </section>
+
+        <section id="jugar" class="rojo">
+            <h1 class="center">¡A JUGAR!</h1>
+            <hr>
+            <h2 class="center">Configuración</h2>
+            <form>
+			<label for="idTemasPreguntas">Tema a elegir</label>
+                <select id="idTemasPreguntas" required>
+    <option value="">Selecciona un tema...</option>
+    <!-- Otras opciones se actualizarán dinámicamente aquí -->
+</select>
+                <label for="idNivelJ">Nivel del juego</label>
+                <input type="text" id="idNivelJ" name="nivelJuego" required>
+                <input type="submit" value="Jugar">
+            </form>
+            <p class="center">Juego</p>
+            <p>Puntuaje acumulado en esta partida: 0</p>
+            <p>La pregunta es...:</p>
+            <p class="center1">TEXTO DE LA PREGUNTA</p>
+            <div class="container2">
+                <input type="button" class="BotonResp1" value="Respuesta 1">
+                <input type="button" class="BotonResp2" value="Respuesta 2">
+                <input type="button" class="BotonResp3" value="Respuesta 3">
+            </div>
+            <div class="container3">
+                <input type="button" id="idBotonAyuda" value="Ayuda">
+                <input type="button" id="idBotonSiguiente" value="Siguiente pregunta">
+                <input type="button" id="idBotonTerminar" value="Terminar">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

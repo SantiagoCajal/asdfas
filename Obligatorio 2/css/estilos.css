@@ -1,0 +1,141 @@
+.center {
+  text-align: center;
+  
+}
+.center1 {
+	text-align: center;
+	border: 1px solid #f2f2f2;
+	padding: 15px;
+	background-color: #F17B28;
+	color: #f2f2f2
+		
+}	
+.container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+ }
+
+ .container1 img {
+    max-width: 400px; 
+    height: auto; 
+}
+ 
+ .container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+ }
+
+ .fotos {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.fotos li {
+    text-align: center;
+}
+
+.fotos img {
+    width: 100px; 
+    height: auto; 
+    border-radius: 50%; 
+}
+ 
+ .container3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+ }
+ 
+ .naranja {
+	background: #FF8E44;
+ }
+ 
+ .amarillo {
+	background: #F9F3B8;
+ }
+ 
+.mostaza {
+	background: #E7AE50;
+}
+
+.rojo {
+	background: #F3A481;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+	border: 1px solid black;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+td {
+    text-align: center; 
+}
+table {
+    border: 2px solid #dddddd;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+}
+th {
+    background-color: #333;
+    color: #fff;
+}
+th:nth-child(3), td:nth-child(4), th:nth-child(5) {
+    width: 420px; 
+}
+
+.BotonResp1 {
+    background-color: #F17B28;
+    color: black;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.BotonResp1:hover {
+	background-color: #45A049;
+}
+.BotonResp1:active {
+	background-color: #3E8E41;
+}
+.BotonResp2 {
+	background-color: #F17B28;
+    color: black;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.BotonResp2:hover {
+	background-color: #45A049;
+}
+.BotonResp2:active {
+	background-color: #3E8E41;
+}
+.BotonResp3 {
+	background-color: #F17B28;
+    color: black;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.BotonResp3:hover {
+	background-color: #45A049;
+}
+.BotonResp3:active {
+	background-color: #3E8E41;
+}
